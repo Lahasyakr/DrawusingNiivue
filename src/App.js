@@ -1,24 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import Viewer from './components/Viewer';
+import Drawer from './components/Drawer';
 
 function App() {
+  const someUrl = "https://niivue.github.io/niivue-demo-images/visiblehuman.nii.gz";
+  //const someUrl = "https://niivue.github.io/niivue-demo-images/mni152.nii.gz";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Drawer url={someUrl}/>
+   // <Viewer imageUrl={someUrl}> </Viewer>
+
   );
 }
 
